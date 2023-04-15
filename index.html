@@ -24,7 +24,6 @@
         - Written the night before I fly to Portugal <br>
         I should be asleep, but I miss you.";
     echo $block;
-      echo '<script> document.getElementById("one").innerHTML = ""; </script>';
     } else {
       echo '<script>document.getElementById("one").innerHTML = "Incorrect password. Please try again.";</script>';
     }
@@ -39,7 +38,7 @@
   <body>
     <h1>Happy Birthday Evie</h1>
     <p>Please enter the password to view the secret text:</p>
-      <form method="post" action="evie.php">
+      <form method="post" action="evie.html">
     <input type="password" id="balls" name="balls">
     <input type="submit" id="but" value="Submit">
     <p id="one"></p>
