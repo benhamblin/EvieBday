@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Password Protected Text</title>
+    <link href=pretty.css rel="stylesheet" type="text/css">
+      
+  </head>
+  <body>
+    <h1>Happy Birthday Evie</h1>
+    <p>Please enter the password to view the secret text:</p>
+    <input type="password" id="password">
+    <button onclick="checkPassword()">Submit</button>
+    <p id="one"></p>
+    <p id="secretText" style="display:none;">I wish I could write a poem <br>
+      Just like the one I sent you <br>
+      Or even similar to Rob's <br>
+      But I am not the writer I thought I would become in year 6 <br>
+      So I cannot adequately describe <br>
+      How pretty you look when you smile <br>
+      Or the laugh that brightens the room <br>
+      
+      Nothing beats the aura of contentment <br>
+        when you're drinking your morning coffee <br>
+        Or the passion in your voice when discussing Taylor <br>
+        I could go on but this is an attempt at a poem, not an essay <br>
+        As always, <br>
+        If I can make you as happy as you make me, <br>
+        Then we'll both be alright. <br>
+        <br>
+        Happy Birthday Evie <br>
+        I love you. <br>
+        <br>
+        - Written the night before I fly to Portugal <br>
+        I should be asleep, but I miss you.
+      </p>
+
+    <script>
+      function checkPassword() {
+        var password = document.getElementById("password").value;
+        if (password == "1234") {
+          document.getElementById("secretText").style.display = "block";
+            document.getElementById("one").innerHTML = "";
+        } else {
+          document.getElementById("one").innerHTML = "Incorrect password. Please try again.";
+        }
+      }
+    </script>
+  </body>
+</html>

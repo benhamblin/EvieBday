@@ -1,0 +1,41 @@
+body {
+  background-color: #fceff7; /* soft pink background color */
+  font-family: 'Crimson Text', serif; /* romantic serif font */
+  font-size: 18px; /* larger font size for readability */
+    align-content: center;
+    text-align: center
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #8b5c65; /* muted pink color for headings */
+  margin: 20px 0; /* some margin for breathing room */
+}
+
+p {
+  color: #4d4d4d; /* dark gray color for normal text */
+  line-height: 1.5; /* increased line height for better readability */
+}
+
+input[type="password"] {
+  background-color: #f8e7e2; /* pale pink color for password field */
+  border: none; /* no border for cleaner look */
+  padding: 10px; /* some padding for breathing room */
+  margin: 10px 0; /* some margin for breathing room */
+}
+
+button {
+  background-color: #b68192; /* muted pink color for button */
+  color: white; /* white text for contrast */
+  border: none; /* no border for cleaner look */
+  padding: 10px 20px; /* some padding for breathing room */
+  margin: 10px 0; /* some margin for breathing room */
+  border-radius: 5px; /* rounded corners for button */
+  cursor: pointer; /* cursor changes to hand when hovering over button */
+}
+
+#secretText {
+  color: #8b5c65; /* muted pink color for secret text */
+  font-size: 22px; /* larger font size for emphasis */
+  font-style: italic; /* italicized font for emphasis */
+  margin: 20px 0; /* some margin for breathing room */
+}
