@@ -1,8 +1,17 @@
 <!DOCTYPE html>
-<?php
-  function checkPassword($password) {
-    if ($password == "1234") {
-    $block = "I wish I could write a poem <br>
+<html>
+  <head>
+    <title>Password Protected Text</title>
+    <link href=pretty.css rel="stylesheet" type="text/css">
+      
+  </head>
+  <body>
+    <h1>Happy Birthday Evie</h1>
+    <p>Please enter the password to view the secret text:</p>
+    <input type="password" id="password">
+    <button onclick="checkPassword()">Submit</button>
+    <p id="one"></p>
+    <p id="secretText" style="display:none;">I wish I could write a poem <br>
       Just like the one I sent you <br>
       Or even similar to Rob's <br>
       But I am not the writer I thought I would become in year 6 <br>
@@ -22,34 +31,19 @@
         I love you. <br>
         <br>
         - Written the night before I fly to Portugal <br>
-        I should be asleep, but I miss you.";
-    echo $block;
-    } else {
-      echo '<script>document.getElementById("one").innerHTML = "Incorrect password. Please try again.";</script>';
-    }
-  }
-?>
-<html>
-  <head>
-    <title>Happy Birthday Evie</title>
-    <link href=pretty.css rel="stylesheet" type="text/css">
-      
-  </head>
-  <body>
-    <h1>Happy Birthday Evie</h1>
-    <p>Please enter the password to view the secret text:</p>
-      <form method="post" action="evie.html">
-    <input type="password" id="balls" name="balls">
-    <input type="submit" id="but" value="Submit">
-    <p id="one"></p>
-    <p id="secretText"></p>
+        I should be asleep, but I miss you.
+      </p>
 
-      </form>
-   <?php
-      if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-		$password = $_POST['balls'];
-        checkPassword($password);
+    <script>
+      function checkPassword() {
+        var password = document.getElementById("password").value;
+        if (password == "1234") {
+          document.getElementById("secretText").style.display = "block";
+            document.getElementById("one").innerHTML = "";
+        } else {
+          document.getElementById("one").innerHTML = "Incorrect password. Please try again.";
+        }
       }
-          ?>
+    </script>
   </body>
 </html>
