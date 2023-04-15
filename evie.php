@@ -24,8 +24,7 @@
         - Written the night before I fly to Portugal <br>
         I should be asleep, but I miss you.";
     echo $block;
-      echo '<script>document.getElementById("secretText").innerHTML = block; 
-      document.getElementById("one").innerHTML = "";</script>';
+      echo '<script> document.getElementById("one").innerHTML = ""; </script>';
     } else {
       echo '<script>document.getElementById("one").innerHTML = "Incorrect password. Please try again.";</script>';
     }
