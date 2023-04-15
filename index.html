@@ -42,7 +42,10 @@
         if (password == "26/11") {
           document.getElementById("secretText").style.display = "block";
             document.getElementById("one").innerHTML = "";
-        } else {
+        } 
+        else if (password == "milk") {
+          document.getElementById("one").innerHTML = "I do like milk, but it is a date.";
+        else {
           document.getElementById("one").innerHTML = "Incorrect password. Please try again.";
         }
       }
