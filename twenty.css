@@ -1,0 +1,144 @@
+/* MAIN */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    text-align: center;
+    
+}
+
+body::before {
+    content: "";
+    position: fixed; /* or absolute; */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #00bfff; /* soft pink background color */
+    z-index: -1; /* Ensures the overlay does not interfere with content */
+}
+
+body {
+    color: white; /* Assuming you want light text over a darker overlay */
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    text-align: center;
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    height: 100%;
+    overflow-x: hidden;
+}
+  h1, h2, h3, h4, h5, h6 {
+    color: white; 
+    margin: 20px 0;
+  }
+
+  #yearHolders {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center the items horizontally */
+    gap: 10px; /* Space between items */
+    padding: 20px;
+}
+
+.birthday {
+    width: calc(33.333% - 20px); /* Subtract gap size from total width for 3 items per row */
+    height: 0;
+    padding-bottom: calc(33.333% - 20px); /* Same as width to maintain aspect ratio */
+    position: relative;
+    background-color: #f0f0f0; /* Placeholder background */
+    position: relative;
+    overflow: hidden; /* Ensure contents don't spill outside */
+    cursor: pointer; 
+}
+
+.birthday img {
+    /* width: 100%; */
+    aspect-ratio: 1;
+    width: 100%;
+    /* height: 100%; */
+    object-fit: cover; /* Ensures the image covers the area */
+    transition: transform 0.5s ease, filter 0.5s ease;
+    /* height: 100%; */
+}
+
+.birthday a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white; /* Ensures text color is visible */
+    background: rgba(0, 0, 0, 0); /* Initial background for overlay */
+    transition: background 0.5s ease; 
+    font-size: 20px;
+}
+.birthday a span {
+    opacity: 0;
+    transition: opacity 0.5s ease; /* Smooth transition for text */
+}
+
+.birthday:hover img {
+    filter: blur(8px); /* Blurs the image */
+}
+
+.birthday:hover a {
+    background: rgba(0, 0, 0, 0.5); /* Adds the overlay */
+}
+
+.birthday:hover a span {
+    opacity: 1; /* Makes the text appear */
+}
+
+.back-button {
+    color: black;
+    font-style: bold;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: inline-block;
+    /* float: left; */
+    font-size: 50px;
+}
+
+@media only screen and (max-width: 600px) {
+    body::before {
+        background: url('img/BLUR\ P.jpg') center center / cover no-repeat, 
+        rgba(0, 0, 0, 0.5);
+    }
+    .birthday {
+        width: 100%; /* 1 item per row on small screens */
+        padding-bottom: 100%; /* Keep aspect ratio */
+    }
+    .birthday img {
+        filter: none; /* Removes or reduces the blur effect */
+    }
+    
+    .birthday a span {
+        opacity: 1; /* Always show the text */
+        background: rgba(0, 0, 0, 0.7); /* Slightly dark background for text */
+        color: white;
+        font-size: 16px; /* Adjust font size as needed */
+        border-radius: 5px; /* Optional: adds rounded corners to the text background */
+        padding: 5px 10px; /* Adds some padding around the text */
+        width: max-content;
+        max-width: 90%; /* Ensures text does not exceed the image width */
+        position: absolute;
+        bottom: 10%; /* Positions the text towards the bottom of the image */
+        left: 50%;
+        transform: translateX(-50%); /* Centers the text block horizontally */
+    }
+  }
+    
+
+  /* TWENTY */
+
+  #videoContainer{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+  }
